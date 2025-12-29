@@ -7,19 +7,16 @@ The smoothie shop application, allows users to order delicious smoothies. It con
 - The Kitchen Service: Prepares the smoothies
 
 To open your personal smoothie shop
-- Open a terminal and run `uv run kitchen_service.py` or use PyCharm to run the service. 
-- Open another terminal and run: `uv run kitchen_service.py` or use PyCharm to run the service.
+- Open a terminal and run `uv run uvicorn order_service:app --port 8000 --reload`. 
+- Open another terminal and run: `uv run uvicorn kitchen_service:app --port 8001 --reload`.
 
 ## Operating the Smoothie Shop in Blind Mode
 
-Let's start to buy some smoothies. Open a terminal and run `uv run buy_smoothies.py` or use 
-PyCharm to run the service. Look at the console output. You should see that your smoothie shop is 
-working fine.
+Let's start to buy some smoothies. Open a terminal and run `uv run buy_smoothies.py`. 
+Look at the console output. You should see that your smoothie shop is working fine.
 
 Let's start to send some more customers to your smoothie shop. Open another terminal and run 
-`uv run buy_smoothies.py` or use PyCharm to run the service (if you use PyCharm, you need to allow multiple 
-instances using _Run > Edit Configurations... > buy_smoothies > Modify Options_). Look at the console
-output again.
+`uv run buy_smoothies.py`. Look at the console output again.
 
 It looks like your shop is having some troubles from time to time. Try to figure out what is going wrong by
 looking at the outputs of all the started services. **You are not allowed to look at the code!** 
