@@ -6,6 +6,8 @@ The smoothie shop application, allows users to order delicious smoothies. It con
 - The Order Service: Accepts smoothie orders
 - The Kitchen Service: Prepares the smoothies
 
+![Smoothie Shop](smoothie-shop.png)
+
 To open your personal smoothie shop
 - Open a terminal and run `uv run uvicorn order_service:app --port 8000 --reload`. 
 - Open another terminal and run: `uv run uvicorn kitchen_service:app --port 8001 --reload`.
@@ -68,15 +70,13 @@ and store it in the root directory of the project.
 You can now adjust the log levels, by setting the level of detail that you want to see in `logging_config.yaml`.
 Make sure that you understand `logging_config.yaml` and how it works before you continue.
 
-# TODO - add a picture of the logging configuration here
+![logging_config.yaml](logging-config.png)
 
 ## Collecting Logs in a Central Place
 
 In order to be able to analyze logs, you need to collect the logs of all your services in a central place and
 make them searchable. We use [Loki](https://grafana.com/oss/loki/) to store logs and [Grafana](https://grafana.com/)
 to query and visualize them.
-
-# TODO - add a picture of the logging configuration here
 
 - Download the file [logging_config_loki.yaml](https://github.com/peterrietzler/ais-dev2il-smoothie-shop/blob/logging/logging_config_loki.yaml)
 and store it in the root directory of the project.
@@ -85,6 +85,8 @@ and store it in the root directory of the project.
 - Start Grafana and Loki by running `docker-compose up -d`.
 - Stop the kitchen service and start it again using 
 `uv run uvicorn kitchen_service:app --port 8001 --reload --log-config logging_config_loki.yaml`.
+
+![logging_config.yaml](logging-loki.png)
 
 Your logs are now sent to Loki in addition to the console output. You can now use Grafana to explore the logs.
 1. Open Grafana at http://localhost:3000
@@ -118,6 +120,8 @@ from prometheus_fastapi_instrumentator import Instrumentator
 # Initialize Prometheus metrics instrumentation
 Instrumentator().instrument(app).expose(app)
 ```
+
+![Prometheus](prometheus.png)
 
 The smoothie shop now exposes HTTP metrics automatically using the `prometheus-fastapi-instrumentator`
 library. This library automatically instruments all HTTP endpoints and provides metrics like:
@@ -199,6 +203,8 @@ FastAPIInstrumentor.instrument_app(app, exclude_spans=["receive", "send"])
 HTTPXClientInstrumentor().instrument()
 ```
 - Insert the same code blocks into `order_service.py` as well. Make sure to change the `service.name` to `order-service`.
+
+![Jaeger](jaeger.png)
 
 The smoothie shop now uses OpenTelemetry to automatically create traces for all HTTP requests and 
 connect traces between services. This means you can follow a single order from the moment it
