@@ -293,22 +293,31 @@ Instrumentator().instrument(app).expose(app)
 
 The smoothie shop now exposes HTTP metrics automatically using the `prometheus-fastapi-instrumentator`
 library. This library automatically instruments all HTTP endpoints and provides metrics like:
-- `http_requests_total` - Total number of HTTP requests
-- `http_request_duration_seconds` - Duration of HTTP requests
-- `http_requests_in_progress` - Number of requests currently being processed
+- `http_requests_total` - Total number of HTTP requests (counter)
+- `http_request_duration_seconds_sum` - Duration of HTTP requests (counter)
+
+Make sure that both services are reloaded and generate some traffic.
+
+Make sure that both services are reloaded and generate some traffic. You can look at the latest state
+of the kitchen service's metrics by visiting: http://localhost:8001/metrics. This is the page that 
+Prometheus scrapes regularly to collect metrics data. Search for `http_requests_total` to find the total 
+number of HTTP requests that the kitchen service has received up until the point in time you loaded the page.
 
 To view the metrics:
-1. Make sure that both services are reloaded and generate some traffic
 1. Open Prometheus at http://localhost:9090
+1. Enter the query `http_requests_total` and inspect the table results. The table shows all available time series for this metric.
+1. Filter down to one dedicated time series through a label, for example: `http_requests_total{handler="/prepare"}`
+1. Use `sum(http_requests_total)` to get the total number of requests across all time series
 1. Try these queries and have a look at the table and graph results:
-   - Request rate per minute: `rate(http_requests_total[1m])` -
+   - Request rate per minute: `rate(http_requests_total[1m])`
    - Average request duration: `http_request_duration_seconds_sum / http_request_duration_seconds_count` 
    - Average request duration calls to `/prepare`: `http_request_duration_seconds_sum{handler="/prepare"} / http_request_duration_seconds_count{handler="/prepare"}`
    
-You can also view the raw metrics at:
-- Kitchen Service: http://localhost:8001/metrics
+The query language that you are just using is called "PromQL". It is a powerful language to query and 
+aggregate metrics data. You can find more information about it in the 
+[Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 
-We are now going to add a business level metric. Consider, we want to know how many smoothies
+We are now going to add our own business level metric. Consider, we want to know how many smoothies
 are ordered per flavour. We can add a custom Prometheus counter metric to provide this information. 
 
 In `kitchen_service.py` add the following right after the creation of the `Instrumentator`:
@@ -492,7 +501,7 @@ Tracing
 
 ### Metrics
 
-Create a dashboard in Grafana that shows the number of smoothies ordered over time. Allows users to 
+Create a dashboard in Grafana that shows the number of smoothies ordered over time. Allow users to 
 filter per flavor. 
 
 Create a dashboard in Grafana that allows users to inspect HTTP calls. Display the request rate 
