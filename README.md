@@ -522,31 +522,43 @@ To view traces:
 1. Make sure that both services are reloaded and generate some traffic
 1. Find traces in the Jager UI and inspect the span hierarchy
 
-## Correlating Logs and Traces
+### 🚀 Level Up
 
-You will get the most out of all this information if you can correlate different signals together. Poor man's 
-corellation can be done using timestamps, but this is not very useful if there are multiple requests going
-on at the same time. We will therefore now correlate logs and traces using trace IDs.
+#### Challenge 1: Jump from a Jaeger Trace to the Matching Logs (Trace ID)
+
+You will get the most out of all this information if you can correlate different signals together.
+Correlating by timestamps is possible, but it breaks down quickly when multiple requests happen at the same time.
+
+**Goal:** When you see a slow or failing trace in Jaeger, instantly find the **exact log lines** for that same request.
+
+##### Step 1: Put `trace_id` into every log line
 
 Add the following code block to both, `order_service.py` and `kitchen_service.py`:
+
 ```python
 from opentelemetry.instrumentation.logging import LoggingInstrumentor
+
 # Instrument logging to automatically inject trace context into all log records
+
 def log_hook(span, record):
     if not hasattr(record, "tags"):
         record.tags = {}
     record.tags["service_name"] = resource.attributes["service.name"]
     record.tags["trace_id"] = format(span.get_span_context().trace_id, "032x")
+
 LoggingInstrumentor().instrument(log_hook=log_hook)
 ```
 
-This is going to add two labels called `service_name` and `trace_id` to all your log records, which you can 
-use to search for all log outputs across services that belong to a specific HTTP call. 
+This adds two labels to all your log records:
+- `service_name`
+- `trace_id`
 
-1. Make sure that both services are reloaded and generate some traffic
-1. Open Jaeger UI at http://localhost:16686
-1. Copy the trace id from the URL
-1. Go to Grafana and search for the label `trace_id` with the value you copied 
+##### Step 2: Search for Logs of a Trace
+
+1. Reload both services and generate some traffic
+2. Open Jaeger UI at http://localhost:16686 and open any trace
+3. Copy the trace id from the URL
+4. Go to Grafana and search for logs with `trace_id=<the value you copied>`
 
 ## Further Readings
 
