@@ -1,6 +1,9 @@
 import httpx
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from pydantic import BaseModel
+import logging
+logger = logging.getLogger(__name__)
 
 # Create the FastAPI application
 app = FastAPI(title="Order Service")
@@ -13,8 +16,10 @@ class Order(BaseModel):
 @app.post("/order")
 async def create_order(order: Order):
     # Create an HTTP client to communicate with the kitchen service
+    logger.info(f"Order {order} received")
     async with httpx.AsyncClient() as client:
         try:
+            logger.info(f"Sending order {order} to kitchen service")
             # Send the order to the kitchen service
             response = await client.post(
                 "http://localhost:8001/prepare",

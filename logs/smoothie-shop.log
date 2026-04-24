@@ -1,0 +1,112 @@
+[32mINFO[0m:     2026-04-24 13:34:31 - uvicorn.error - Will watch for changes in these directories: ['/mnt/c/Users/marco/DEV2/smoothie-shop/ais-dev2il-smoothie-shop']
+[31mERROR[0m:    2026-04-24 13:34:31 - uvicorn.error - [Errno 98] Address already in use
+[32mINFO[0m:     2026-04-24 13:34:57 - uvicorn.error - Will watch for changes in these directories: ['/mnt/c/Users/marco/DEV2/smoothie-shop/ais-dev2il-smoothie-shop']
+[31mERROR[0m:    2026-04-24 13:34:57 - uvicorn.error - [Errno 98] Address already in use
+[32mINFO[0m:     2026-04-24 13:35:30 - uvicorn.error - Will watch for changes in these directories: ['/mnt/c/Users/marco/DEV2/smoothie-shop/ais-dev2il-smoothie-shop']
+[31mERROR[0m:    2026-04-24 13:35:30 - uvicorn.error - [Errno 98] Address already in use
+[32mINFO[0m:     2026-04-24 13:36:29 - uvicorn.error - Will watch for changes in these directories: ['/mnt/c/Users/marco/DEV2/smoothie-shop/ais-dev2il-smoothie-shop']
+[31mERROR[0m:    2026-04-24 13:36:29 - uvicorn.error - [Errno 98] Address already in use
+[32mINFO[0m:     2026-04-24 13:39:27 - uvicorn.error - Will watch for changes in these directories: ['/mnt/c/Users/marco/DEV2/smoothie-shop/ais-dev2il-smoothie-shop']
+[32mINFO[0m:     2026-04-24 13:39:27 - uvicorn.error - Uvicorn running on [1mhttp://127.0.0.1:8001[0m (Press CTRL+C to quit)
+[32mINFO[0m:     2026-04-24 13:39:27 - uvicorn.error - Started reloader process [[36m[1m1436[0m] using [36m[1mStatReload[0m
+[32mINFO[0m:     2026-04-24 13:39:30 - kitchen_service - Kitchen service has started, we have 1 cooks available
+[32mINFO[0m:     2026-04-24 13:39:30 - uvicorn.error - Started server process [[36m1438[0m]
+[32mINFO[0m:     2026-04-24 13:39:30 - uvicorn.error - Waiting for application startup.
+[32mINFO[0m:     2026-04-24 13:39:30 - uvicorn.error - Application startup complete.
+[32mINFO[0m:     2026-04-24 13:39:30 - kitchen_service - Processing order with flavour Banana
+[36mDEBUG[0m:    2026-04-24 13:39:30 - kitchen_service - Waiting for a cook to become available
+[32mINFO[0m:     2026-04-24 13:39:32 - kitchen_service - Smoothie with flavor Banana prepared
+[32mINFO[0m:     2026-04-24 13:39:32 - uvicorn.access - 127.0.0.1:59786 - "POST /prepare HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 13:39:33 - kitchen_service - Processing order with flavour Mango
+[36mDEBUG[0m:    2026-04-24 13:39:33 - kitchen_service - Waiting for a cook to become available
+[32mINFO[0m:     2026-04-24 13:39:35 - kitchen_service - Smoothie with flavor Mango prepared
+[32mINFO[0m:     2026-04-24 13:39:35 - uvicorn.access - 127.0.0.1:59794 - "POST /prepare HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 13:39:35 - kitchen_service - Processing order with flavour Blueberry
+[36mDEBUG[0m:    2026-04-24 13:39:35 - kitchen_service - Waiting for a cook to become available
+[32mINFO[0m:     2026-04-24 13:39:37 - kitchen_service - Smoothie with flavor Blueberry prepared
+[32mINFO[0m:     2026-04-24 13:39:37 - uvicorn.access - 127.0.0.1:44820 - "POST /prepare HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 13:39:38 - kitchen_service - Processing order with flavour Strawberry
+[36mDEBUG[0m:    2026-04-24 13:39:38 - kitchen_service - Waiting for a cook to become available
+[32mINFO[0m:     2026-04-24 13:39:40 - kitchen_service - Smoothie with flavor Strawberry prepared
+[32mINFO[0m:     2026-04-24 13:39:40 - uvicorn.access - 127.0.0.1:44828 - "POST /prepare HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 13:39:40 - kitchen_service - Processing order with flavour Mango
+[36mDEBUG[0m:    2026-04-24 13:39:40 - kitchen_service - Waiting for a cook to become available
+[32mINFO[0m:     2026-04-24 13:39:42 - kitchen_service - Smoothie with flavor Mango prepared
+[32mINFO[0m:     2026-04-24 13:39:42 - uvicorn.access - 127.0.0.1:44842 - "POST /prepare HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 13:39:43 - kitchen_service - Processing order with flavour Banana
+[36mDEBUG[0m:    2026-04-24 13:39:43 - kitchen_service - Waiting for a cook to become available
+[32mINFO[0m:     2026-04-24 13:39:44 - kitchen_service - Smoothie with flavor Banana prepared
+[32mINFO[0m:     2026-04-24 13:39:44 - uvicorn.access - 127.0.0.1:44846 - "POST /prepare HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 13:39:44 - kitchen_service - Processing order with flavour Blueberry
+[36mDEBUG[0m:    2026-04-24 13:39:44 - kitchen_service - Waiting for a cook to become available
+[32mINFO[0m:     2026-04-24 13:39:46 - kitchen_service - Smoothie with flavor Blueberry prepared
+[32mINFO[0m:     2026-04-24 13:39:46 - uvicorn.access - 127.0.0.1:53174 - "POST /prepare HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:15:58 - uvicorn.access - 127.0.0.1:37070 - "GET /metrics HTTP/1.1" 404
+[32mINFO[0m:     2026-04-24 14:16:08 - uvicorn.access - 127.0.0.1:42964 - "GET /metrics HTTP/1.1" 404
+[32mINFO[0m:     2026-04-24 14:16:18 - uvicorn.access - 127.0.0.1:46866 - "GET /metrics HTTP/1.1" 404
+[32mINFO[0m:     2026-04-24 14:16:28 - uvicorn.access - 127.0.0.1:38596 - "GET /metrics HTTP/1.1" 404
+[32mINFO[0m:     2026-04-24 14:16:37 - uvicorn.access - 127.0.0.1:51136 - "GET /metrics HTTP/1.1" 404
+[32mINFO[0m:     2026-04-24 14:16:48 - uvicorn.access - 127.0.0.1:36232 - "GET /metrics HTTP/1.1" 404
+[32mINFO[0m:     2026-04-24 14:17:38 - uvicorn.error - Will watch for changes in these directories: ['/mnt/c/Users/marco/DEV2/smoothie-shop/ais-dev2il-smoothie-shop']
+[31mERROR[0m:    2026-04-24 14:17:38 - uvicorn.error - [Errno 98] Address already in use
+[32mINFO[0m:     2026-04-24 14:19:25 - uvicorn.error - Will watch for changes in these directories: ['/mnt/c/Users/marco/DEV2/smoothie-shop/ais-dev2il-smoothie-shop']
+[32mINFO[0m:     2026-04-24 14:19:25 - uvicorn.error - Uvicorn running on [1mhttp://127.0.0.1:8001[0m (Press CTRL+C to quit)
+[32mINFO[0m:     2026-04-24 14:19:25 - uvicorn.error - Started reloader process [[36m[1m1686[0m] using [36m[1mStatReload[0m
+[32mINFO[0m:     2026-04-24 14:19:28 - kitchen_service - Kitchen service has started, we have 1 cooks available
+[32mINFO[0m:     2026-04-24 14:19:28 - uvicorn.error - Started server process [[36m1688[0m]
+[32mINFO[0m:     2026-04-24 14:19:28 - uvicorn.error - Waiting for application startup.
+[32mINFO[0m:     2026-04-24 14:19:28 - uvicorn.error - Application startup complete.
+[32mINFO[0m:     2026-04-24 14:19:36 - uvicorn.access - 127.0.0.1:60622 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:19:46 - uvicorn.access - 127.0.0.1:58940 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:19:56 - uvicorn.access - 127.0.0.1:54768 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:20:06 - uvicorn.access - 127.0.0.1:33838 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:20:16 - uvicorn.access - 127.0.0.1:35548 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:20:26 - uvicorn.access - 127.0.0.1:52036 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:20:36 - uvicorn.access - 127.0.0.1:56188 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:20:46 - uvicorn.access - 127.0.0.1:39796 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:20:56 - uvicorn.access - 127.0.0.1:33926 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:21:06 - uvicorn.access - 127.0.0.1:40872 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:21:16 - uvicorn.access - 127.0.0.1:40890 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:21:26 - uvicorn.access - 127.0.0.1:56510 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:21:35 - uvicorn.access - 127.0.0.1:55404 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:21:45 - uvicorn.access - 127.0.0.1:39242 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:21:55 - uvicorn.access - 127.0.0.1:59928 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:22:05 - uvicorn.access - 127.0.0.1:43236 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:22:15 - uvicorn.access - 127.0.0.1:59340 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:22:25 - uvicorn.access - 127.0.0.1:47022 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:22:35 - uvicorn.access - 127.0.0.1:43012 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:22:45 - uvicorn.access - 127.0.0.1:54050 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:22:55 - uvicorn.access - 127.0.0.1:36002 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:23:04 - uvicorn.access - 127.0.0.1:36136 - "GET /metrics HTTP/1.1" 200
+[33mWARNING[0m:  2026-04-24 14:23:05 - uvicorn.error - StatReload detected changes in 'kitchen_service.py'. Reloading...
+[32mINFO[0m:     2026-04-24 14:23:05 - uvicorn.error - Shutting down
+[32mINFO[0m:     2026-04-24 14:23:05 - uvicorn.error - Waiting for application shutdown.
+[32mINFO[0m:     2026-04-24 14:23:05 - uvicorn.error - Application shutdown complete.
+[32mINFO[0m:     2026-04-24 14:23:05 - uvicorn.error - Finished server process [[36m1688[0m]
+[32mINFO[0m:     2026-04-24 14:23:09 - kitchen_service - Kitchen service has started, we have 1 cooks available
+[32mINFO[0m:     2026-04-24 14:23:09 - uvicorn.error - Started server process [[36m1773[0m]
+[32mINFO[0m:     2026-04-24 14:23:09 - uvicorn.error - Waiting for application startup.
+[32mINFO[0m:     2026-04-24 14:23:09 - uvicorn.error - Application startup complete.
+[32mINFO[0m:     2026-04-24 14:23:14 - uvicorn.access - 127.0.0.1:58728 - "GET /metrics HTTP/1.1" 200
+[33mWARNING[0m:  2026-04-24 14:23:16 - uvicorn.error - StatReload detected changes in 'kitchen_service.py'. Reloading...
+[32mINFO[0m:     2026-04-24 14:23:16 - uvicorn.error - Shutting down
+[32mINFO[0m:     2026-04-24 14:23:16 - uvicorn.error - Waiting for application shutdown.
+[32mINFO[0m:     2026-04-24 14:23:16 - uvicorn.error - Application shutdown complete.
+[32mINFO[0m:     2026-04-24 14:23:16 - uvicorn.error - Finished server process [[36m1773[0m]
+[32mINFO[0m:     2026-04-24 14:23:19 - kitchen_service - Kitchen service has started, we have 1 cooks available
+[32mINFO[0m:     2026-04-24 14:23:19 - uvicorn.error - Started server process [[36m1778[0m]
+[32mINFO[0m:     2026-04-24 14:23:19 - uvicorn.error - Waiting for application startup.
+[32mINFO[0m:     2026-04-24 14:23:19 - uvicorn.error - Application startup complete.
+[32mINFO[0m:     2026-04-24 14:23:24 - uvicorn.access - 127.0.0.1:34176 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:23:34 - uvicorn.access - 127.0.0.1:56784 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:23:44 - uvicorn.access - 127.0.0.1:39470 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:23:54 - uvicorn.access - 127.0.0.1:36024 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:24:03 - uvicorn.error - Will watch for changes in these directories: ['/mnt/c/Users/marco/DEV2/smoothie-shop/ais-dev2il-smoothie-shop']
+[31mERROR[0m:    2026-04-24 14:24:03 - uvicorn.error - [Errno 98] Address already in use
+[32mINFO[0m:     2026-04-24 14:24:04 - uvicorn.access - 127.0.0.1:43870 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:24:14 - uvicorn.access - 127.0.0.1:40230 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:24:24 - uvicorn.access - 127.0.0.1:48462 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:24:34 - uvicorn.access - 127.0.0.1:43958 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:24:44 - uvicorn.access - 127.0.0.1:41394 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:24:54 - uvicorn.access - 127.0.0.1:55432 - "GET /metrics HTTP/1.1" 200
+[32mINFO[0m:     2026-04-24 14:25:04 - uvicorn.access - 127.0.0.1:48050 - "GET /metrics HTTP/1.1" 200
